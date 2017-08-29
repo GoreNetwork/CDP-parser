@@ -45,7 +45,7 @@ def parse_cdp_out(file_name):
 		next_line = False
 		cdp_parse = {}
 		for cdp_line in cdp_entrie.all_children:
-			if "IP" in cdp_line.text:
+			if "IP " in cdp_line.text:
 				ip = str(get_ip (str(cdp_line.text)))
 				for each in strip_these:
 					ip = ip.strip(each)
